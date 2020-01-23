@@ -3,7 +3,7 @@
 class ResistorColorDuo
   def self.value(resistors)
     total = []
-    resistors.each do |color|
+    resistors[0..1].each do |color|
       total << case color
       when 'black' then 0
       when 'brown' then 1
@@ -17,6 +17,6 @@ class ResistorColorDuo
       when 'white' then 9
       end
     end
-    total[0..1].join('').to_i
+    total.join.to_i
   end
 end
