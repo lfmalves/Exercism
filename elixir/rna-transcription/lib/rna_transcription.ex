@@ -1,9 +1,9 @@
 defmodule RnaTranscription do
   @nucleotides %{
-    71 => 67,
-    67 => 71,
-    84 => 65,
-    65 => 85
+    ?G => ?C,
+    ?C => ?G,
+    ?T => ?A,
+    ?A => ?U
   }
   @doc """
   Transcribes a character list representing DNA nucleotides to RNA
