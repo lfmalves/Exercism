@@ -18,4 +18,12 @@ class HighScores
 	def personal_top_three()
 		@scores.max(3)
 	end
+
+	def latest_is_personal_best?()
+		if @scores.last == @scores.max
+			true
+		else
+			false
+		end
+	end
 end
