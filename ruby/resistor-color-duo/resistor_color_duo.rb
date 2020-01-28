@@ -15,10 +15,6 @@ class ResistorColorDuo
   }
 
   def self.value(resistors)
-    total = []
-    resistors[0..1].each do |color|
-      total << @map_color_to_value[color]
-    end
-    total.join.to_i
+    resistors[0..1].each_with_object([]) { |color, total| total << @map_color_to_value[color.to_sym] }.join.to_i
   end
 end
