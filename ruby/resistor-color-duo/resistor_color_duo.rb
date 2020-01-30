@@ -14,7 +14,7 @@ class ResistorColorDuo
     white: 9
   }
 
-  def self.value(resistors)
-    resistors[0..1].each_with_object([]) { |color, total| total << @map_color_to_value[color.to_sym] }.join.to_i
+  def self.value(colors)
+    colors[0..1].each_with_object([]) { |color, sum| sum << @map_color_to_value[color.to_sym] }.join.to_i
   end
 end
